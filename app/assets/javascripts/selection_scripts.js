@@ -19,9 +19,9 @@ function getSelectionsSuccess(feed){
 			selections.push(selection)
 		})
 		// $("#" + selections[0].id + ".selection").addClass("un_uppable").addClass("un_downable")
-		$(".list").children()[1].classList.add("un_uppable", "un_downable")
-		if ($(".list").children()[2]) {
-			$(".list").children()[2].classList.add("un_uppable")
+		$(".list").children()[0].classList.add("un_uppable", "un_downable")
+		if ($(".list").children()[1]) {
+			$(".list").children()[1].classList.add("un_uppable")
 			// $("#" + selections[1].id + ".selection").addClass("un_uppable")
 		}
 		setCorrectVoteListeners()

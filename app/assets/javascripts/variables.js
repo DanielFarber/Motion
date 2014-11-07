@@ -23,8 +23,9 @@ var playingSongId = null
 
 var globalPlayState = null
 
-var playback_token = "GAlUXK5r_____2R2cHlzNHd5ZXg3Z2M0OXdoaDY3aHdrbjEyNy4wLjAuMRqjcgAUGYnGr8bj6WIzf-0="
-var domain = "127.0.0.1";
+var playback_token = "GCBUXTCW_____2R2cHlzNHd5ZXg3Z2M0OXdoaDY3aHdrbmluZmluaXRlLWNyYWctNTU3NS5oZXJva3VhcHAuY29tq0oegVszpS8atgjvzfV4bw=="
+
+var domain = "infinite-crag-5575.herokuapp.com";
 
 var flashvars = {
   'playbackToken': playback_token,

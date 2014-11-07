@@ -1,0 +1,26 @@
+<center>
+
+<% if message %>
+<div><%= message %></div>
+<% end %>
+<h3>Log In</h3>
+<%= form_tag("/sessions", method: "POST") do %>
+  <%= label_tag(:email, "Email") %>
+  <%= text_field_tag(:email) %>
+  <%= label_tag(:password, "Password") %>
+  <%= password_field_tag(:password) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+<h2>OR</h2>
+
+<h3>Create an account</h3>
+<%= form_tag("/users", method: "POST") do %>
+  <%= label_tag(:email, "Email") %>
+  <%= text_field_tag(:email) %>
+  <%= label_tag(:password, "Password") %>
+  <%= password_field_tag(:password) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+</center>

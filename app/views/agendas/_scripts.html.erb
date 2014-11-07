@@ -1,0 +1,34 @@
+<script type="text/template" id="quiztion_display">
+<div id="quiztion" class="open_question"> 
+<div id="category"></div>
+<div id= "question"></div>
+<hr>
+<div id="answer"><input id="answer_input"><div id="outcome"></div></div>
+</div>
+</script>
+
+<script type="text/template" id="audio_player">
+<audio class="audio_player"></audio>
+</script>
+
+<script type="text/template" id="rdio_player">
+<div id="apiswf"></div>
+</script>
+
+<script type="text/template" id="selections_suggestions">
+<div class="suggestion" id="<%%= rdio_id %>"><%%= title %> by <%%= artist %></div>
+</script>
+
+<script type="text/template" id="selection_div">
+<div class="selection" id="<%%= id %>" name="<%%= rdio_id %>">
+<span class="position position<%%= position %>"><%%= position %></span>
+<span class="selection_title"><%%= info %> <span class="vote_up">↑</span><span class="vote_down">↓</span></span></div>
+</script>
+
+<script type="text/template" id="vote_template">
+<div class="vote">
+<span class="vote_first"><%%= first %></span>
+<span class="vote_second<%%= down %>"><%%= second %></span>
+<div class="vote_third"><%%= third %></div>
+</div>
+</script>

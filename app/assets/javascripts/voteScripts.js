@@ -20,28 +20,27 @@ function postVoteSuccess(feed) {
 
 }
 
-function getVotes(initial) {
-	console.log("getting")
+function getVotes() {
 	var id = $("h3").attr("id").split(" ")[0]
 	var success = getVoteSuccess
 	var url = "/agendas/" + id + "/votes"
-	if (initial) {success = initialVoteGet}
-	else {url += ("/" + lastVoteGetTime)}
 	var options = {
 		url: url,
 		dataType: "json",
-		success: success
+		success: getVoteSuccess
 	}
 	$.ajax(options)
 }
 
-function getVoteSuccess(feed) {
-	lastVoteGetTime = Date()
 
-}
 
-function displayVotes(agenda_id) {
-	$("<div class='votes_display'>").insertAfter($("h3"))
+function displayVotes() {
+	if ($(".votes_display").length != 0) {
+		$(".votes_display").children().detach()
+	}
+	else {
+		$("<div class='votes_display'>").insertAfter($("h3"))
+	}
 	var template = _.template($("script#vote_template").text())
 	votes.forEach(function(vote) {
 		var hash = parseVote(vote)
@@ -50,8 +49,8 @@ function displayVotes(agenda_id) {
 	})
 }
 
-function initialVoteGet(feed) {
-	lastVoteGetTime = Date()
+function getVoteSuccess(feed) {
+	votes = []
 	feed.forEach(function(vote) {
 		votes.push(vote)
 	})
@@ -72,10 +71,6 @@ function parseVote(vote) {
 	}
 	objeto.third = getSelectionInfo(vote.selection_id)
 	return objeto
-}
-
-function displayVote(vote) {
-
 }
 
 

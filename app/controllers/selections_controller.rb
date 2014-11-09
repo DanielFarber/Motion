@@ -31,4 +31,9 @@ class SelectionsController < ApplicationController
 
 	end
 
+	def destroy
+		selection = Selection.find(params[:id]).destroy
+		render :json => selection
+	end
+
 end

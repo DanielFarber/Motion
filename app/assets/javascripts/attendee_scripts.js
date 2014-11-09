@@ -25,19 +25,23 @@ function getAttendees() {
 	options = {
 		url: "agendas/" + agenda_id + "/attendees",
 		dataType: "json",
-		success: "generateAttendeeSuccess"
+		success: getAttendeeSuccess
 	}
+	$.ajax(options)
 }
 
-function generateAttendeeSuccess(feed) {
+function getAttendeeSuccess(feed) {
 	attendees = []
 	_.each(feed, function(attendee) {
 		attendees.push(attendee)
 	})
+	getVotes()
 }
 
+function generateAttendeeSuccess(){}
+
 function destroyAttendeeSuccess(feed) {
-	attendees = []
+	resetVariables()
 }
 
 function getAttendeeUsername(user_id) {

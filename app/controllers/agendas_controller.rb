@@ -10,7 +10,11 @@ class AgendasController < ApplicationController
 	end
 
 	def show_selections
+		user = User.find(session[:id])
 		agenda = Agenda.find(params[:id])
+		attendee = user.attendees.where(agenda_id: agenda.id)[0]
+		attendee.update(updated_at: Time.now)
+		Attendee.update_attendance
 		selections = agenda.selections.order(:position)
 		output = {results: selections, position: agenda.position}
 		render :json => output

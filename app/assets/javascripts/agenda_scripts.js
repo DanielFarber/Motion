@@ -16,7 +16,7 @@ function viewAgenda(feed) {
 	generateAttendee(feed)
 	window.onunload = destroyAttendee
 	$("a").click(destroyAttendee)
-	getVotes(true)
+	// getVotes(true)
 }
 
 function postAgenda() {

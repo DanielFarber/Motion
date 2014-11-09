@@ -76,7 +76,7 @@ hl {
 
 .selection {
 	/*margin-left: 65px;*/
-	/*width: 250px;*/
+	width: 11em;
 	cursor: default;
 	height: 80px;
 	border: 1px white dotted;
@@ -151,7 +151,7 @@ div.suggestion {
 }
 
 .votes_display {
-	width: 22%;
+	width: 11em;
 	height: 300px;
 	position: absolute;
 	left: 11%;
@@ -174,4 +174,8 @@ div.suggestion {
 
 .vote_second.down {
 	color: #ff4040;
+}
+
+.nil {
+	display: none;
 }

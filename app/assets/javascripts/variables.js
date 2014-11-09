@@ -7,11 +7,20 @@ var selections = []
 // var shunt = []
 
 var process = false
-var allSelections
 var votes = []
 var lastVoteGetTime
 var attendees = []
 var position = 0
+
+function resetVariables() {
+	process = false
+	votes = []
+	lastVoteGetTime = ""
+	attendees = []
+	position = 0
+	selections = []
+}
+
 
 // This variable is in script.js
 // var interval = setInterval(runUpdateProcesses, 5000)
@@ -23,9 +32,18 @@ var playingSongId = null
 
 var globalPlayState = null
 
-var playback_token = "GCBUXTCW_____2R2cHlzNHd5ZXg3Z2M0OXdoaDY3aHdrbmluZmluaXRlLWNyYWctNTU3NS5oZXJva3VhcHAuY29tq0oegVszpS8atgjvzfV4bw=="
+var playback_token = ""
 
-var domain = "infinite-crag-5575.herokuapp.com";
+
+
+
+var domain = document.domain
+if (domain == "127.0.0.1") {
+	playback_token = "GAlUXUiw_____2R2cHlzNHd5ZXg3Z2M0OXdoaDY3aHdrbjEyNy4wLjAuMdigCiGVPuLLXVwOzZnC1yA="
+}
+else {
+	playback_token = "GCBUXTCW_____2R2cHlzNHd5ZXg3Z2M0OXdoaDY3aHdrbmluZmluaXRlLWNyYWctNTU3NS5oZXJva3VhcHAuY29tq0oegVszpS8atgjvzfV4bw=="
+}
 
 var flashvars = {
   'playbackToken': playback_token,

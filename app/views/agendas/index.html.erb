@@ -4,20 +4,20 @@
 	<span class="username" id='<%= user.id %>'><%= user.email.downcase %></span>
 	<span class="logout" style="float: right">
 		<form action="/sessions" method="POST" name="logout">
-		<input type="hidden" name="_method" value="DELETE">
-		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-		<a>logout</a>
-	</form>
+			<input type="hidden" name="_method" value="DELETE">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+			<a>logout</a>
+		</form>
 	</span>
 </nav>
 
 
 <div class="centered"><div class="list">
-<% Agenda.all.order(:id).each do |agenda| %>
-<div class="agenda" id="<%= agenda.id %> user<%= agenda.user_id %>">
-	<%= agenda.name %>
-</div>
-<% end %>
+	<% Agenda.all.order(:id).each do |agenda| %>
+	<div class="agenda" id="<%= agenda.id %> user<%= agenda.user_id %>">
+		<%= agenda.name %>
+	</div>
+	<% end %>
 </div>
 <br><br>
 <label id="new_agenda">

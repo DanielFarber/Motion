@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get "/agendas/:id/votes" => "votes#index"
   get "/agendas/:id/votes/:time" => "votes#index"
   get "agendas/:id/attendees" => "attendees#index"
+  delete "/selections/:id" => "selections#destroy"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

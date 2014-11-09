@@ -30,6 +30,7 @@ function getSelectionsSuccess(feed){
 			evaluatePlayer()
 		}
 	}
+	getAttendees()
 }
 
 function createSelectionEl(selection) {
@@ -120,7 +121,7 @@ function setCorrectVoteListeners() {
 
 function postMovementSuccess(feed) {
 	$(".selection").detach()
-	getSelections($("h3").attr("id"))
+	getSelections($("h3").attr("id").split(" ")[0])
 }
 
 function getSelectionInfo(id) {

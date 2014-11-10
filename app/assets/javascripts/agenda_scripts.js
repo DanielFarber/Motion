@@ -1,10 +1,11 @@
 function viewAgenda(feed) {
 	var agenda_id = $(this).attr("id").split(" ")[0]
 	$(".agenda").detach()
-	var heading = document.createElement("h3")
+	// var heading = document.createElement("h3")
+	var heading = document.querySelector(".agenda_heading")
 	heading.id = agenda_id
 	heading.textContent = this.innerText
-	$(heading).insertBefore($(".list"))
+	// $(heading).insertBefore($(".list"))
 	$("#new_agenda").attr("id", "new_selection")
 	$("#input_text").text("Add a song to the playlist!")
 	$("#form_action").unbind().toggle()
@@ -16,7 +17,7 @@ function viewAgenda(feed) {
 	generateAttendee(feed)
 	window.onunload = destroyAttendee
 	$("a").click(destroyAttendee)
-	// getVotes(true)
+	getAttendees()
 }
 
 function postAgenda() {

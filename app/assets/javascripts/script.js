@@ -31,6 +31,7 @@ function runUpdateProcesses(feed) {
 	if (process) {
 		var arg = $("h3").attr("id").split(" ")[0]
 		getSelections(arg)
+		getAttendees()
 	}
 }
 

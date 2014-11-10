@@ -12,17 +12,24 @@
 </nav>
 
 
-<div class="centered"><div class="list">
-	<% Agenda.all.order(:id).each do |agenda| %>
-	<div class="agenda" id="<%= agenda.id %> user<%= agenda.user_id %>">
-		<%= agenda.name %>
+<div class="centered">
+	<h3 class="agenda_heading"></h3>
+	<div class="votes_display"></div>
+	<div class="list">
+		<% Agenda.all.order(:id).each do |agenda| %>
+		<div class="agenda" id="<%= agenda.id %> user<%= agenda.user_id %>">
+			<%= agenda.name %>
+		</div>
+		<% end %>
 	</div>
-	<% end %>
+	<div class="attendees_display"></div>
+
 </div>
-<br><br>
-<label id="new_agenda">
-	<span id="input_text">Create a new agenda!</span>
-	<span id="input_field_wrapper"><input id="input_field"></span>
-	<button id="form_action">Rock it</button>
-</label>
+<div id="input_div">
+	<label id="new_agenda">
+		<span id="input_text">Create a new agenda!</span>
+		<span id="input_field_wrapper"><input id="input_field"></span>
+		<button id="form_action">Rock it</button>
+	</label>
 </div>
+

@@ -32,3 +32,8 @@
 <div class="vote_third"><%%= third %></div>
 </div>
 </script>
+
+<script type="text/template" id="attendee_template">
+<%% if (present) {var hlit = " highlighted"} %>
+<div class="attendee<%%= hlit %>" id="<%%= id %>"><%%= username %></div>
+</script>

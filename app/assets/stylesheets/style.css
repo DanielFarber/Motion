@@ -5,7 +5,6 @@ body {
 	font-size: 25px;
 }
 div.motion {
-	/*font-family: "Amatic SC";*/
 	font-size: 120px;
 	font-weight: bold;
 	border-bottom: white 2px dotted;
@@ -22,9 +21,15 @@ a {
 	cursor: pointer;
 }
 
-div.centered {
-	width: 30%;
-	margin: 0 35%;
+.centered {
+	width: 100%;
+	display: block;
+	padding-bottom: 40px;
+}
+
+.agenda_heading {
+	width: 24%;
+	margin-left: 38%;
 	text-align: center;
 }
 
@@ -32,12 +37,6 @@ div.centered {
 	height: 325px;
 	width: 300px;
 	overflow: auto;
-}
-
-.list {
-	max-height: 300px;
-	overflow: auto;
-	display: inline-block;
 }
 
 .selection_suggestion {
@@ -50,6 +49,7 @@ div.centered {
 	background-color: gray;
 	color: black;
 }
+
 
 .open_question {
 	position: absolute;
@@ -74,24 +74,16 @@ hl {
 	background-color: white;
 }
 
-.selection {
-	/*margin-left: 65px;*/
-	width: 11em;
-	cursor: default;
-	height: 80px;
-	border: 1px white dotted;
-}
-
 .vote_up, .vote_down {
 	cursor: pointer;
 }
 
 .agenda {
-	width: 250px;
 	cursor: pointer;
 	height: 80px;
 	border: 1px white dotted;
-	/*margin-left: 65px;*/
+	display: block;
+	text-align: center;
 }
 
 #quiztion {
@@ -116,19 +108,17 @@ input {
 	outline: none;
 }
 
-div.suggestions {
+.suggestions {
 	height: 10em;
 	width: 35%;
 	border: 1px dotted white;
 	z-index: 1000;
 	left: 32.5%;
-	position: absolute;
-	top: 25%;
 	background-color: black;
 	overflow: auto;
 }
 
-div.suggestion {
+.suggestion {
 	border: 1px dotted white;
 	height: 2.5em;
 	text-align: center;
@@ -150,12 +140,27 @@ div.suggestion {
 	height: 0px;
 }
 
-.votes_display {
-	width: 11em;
+.list {
 	height: 300px;
-	position: absolute;
-	left: 11%;
 	overflow: auto;
+	display: inline-block;
+	width: 24%;
+	margin: 0 7%;
+	cursor: default;
+}
+
+.selection {
+	height: 80px;
+	border: 1px white dotted;
+}
+
+.votes_display {
+	width: 24%;
+	margin-left: 7%;
+	height: 300px;
+	overflow: auto;
+	display: inline-block;
+	cursor: default;
 }
 
 .vote {
@@ -174,6 +179,22 @@ div.suggestion {
 
 .vote_second.down {
 	color: #ff4040;
+}
+
+.attendees_display {
+	width: 24%;
+	overflow: auto;
+	height: 300px;
+	display: inline-block;
+}
+
+.attendee {
+	height: 40px;
+	border: 1px white dotted;
+}
+
+#input_div {
+	margin-left: 37.7%;
 }
 
 .nil {

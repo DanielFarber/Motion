@@ -18,7 +18,7 @@ function getSelectionsSuccess(feed){
 			}
 			selections.push(selection)
 		})
-		// $("#" + selections[0].id + ".selection").addClass("un_uppable").addClass("un_downable")
+		$("#" + selections[0].id + ".selection").addClass("un_uppable").addClass("un_downable")
 		$(".list").children()[0].classList.add("un_uppable", "un_downable")
 		if ($(".list").children()[1]) {
 			$(".list").children()[1].classList.add("un_uppable")
@@ -30,7 +30,7 @@ function getSelectionsSuccess(feed){
 			evaluatePlayer()
 		}
 	}
-	getAttendees()
+	// getAttendees()
 }
 
 function createSelectionEl(selection) {

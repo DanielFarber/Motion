@@ -116,6 +116,8 @@ input {
 	left: 32.5%;
 	background-color: black;
 	overflow: auto;
+	position: absolute;
+	top: 30%;
 }
 
 .suggestion {

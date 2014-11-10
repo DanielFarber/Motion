@@ -35,19 +35,13 @@ function getVotes() {
 
 
 function displayVotes() {
-	if ($(".vote")[0]) {
-		$(".vote").addClass("delete")
-	}
-	// else {
-		// $("<div class='votes_display'>").insertAfter($("h3"))
-	// }
+	$(".vote").detach()
 	var template = _.template($("script#vote_template").text())
 	votes.forEach(function(vote) {
 		var hash = parseVote(vote)
 		var text = template(hash)
 		$(".votes_display").append($(text))
 	})
-	if ($(".delete")[0]) {$(".delete").remove()}
 }
 
 function getVoteSuccess(feed) {

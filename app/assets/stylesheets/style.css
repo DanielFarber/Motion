@@ -147,11 +147,13 @@ input {
 	width: 24%;
 	margin: 0 7%;
 	cursor: default;
+	vertical-align: top;
 }
 
 .selection {
 	height: 80px;
 	border: 1px white dotted;
+	overflow: auto;
 }
 
 .votes_display {
@@ -161,6 +163,7 @@ input {
 	overflow: auto;
 	display: inline-block;
 	cursor: default;
+	vertical-align: top;
 }
 
 .vote {
@@ -186,6 +189,7 @@ input {
 	overflow: auto;
 	height: 300px;
 	display: inline-block;
+	vertical-align: top;
 }
 
 .attendee {

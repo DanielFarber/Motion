@@ -41,16 +41,10 @@ function getAttendeeSuccess(feed) {
 
 function displayAttendees() {
 	$(".attendees_display").children().detach()
-	$(".filler").detach()
 	attendees.forEach(function(attendee) {
 		var template = _.template($("script#attendee_template").text())
 		$(".attendees_display").append($(template(attendee)))
 	})
-	var filler = 300 - (attendees.length * 40)
-	if (filler > 0) {
-		$(".attendees_display").append($("<div class='filler'>"))
-		$(".filler").height(filler)
-	}
 	getVotes()
 }
 

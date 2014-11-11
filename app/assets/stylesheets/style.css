@@ -226,3 +226,8 @@ input {
 #input_div {
 	margin-left: 37.7%;
 }
+
+.present {
+	color: orange;
+	float: right;
+}

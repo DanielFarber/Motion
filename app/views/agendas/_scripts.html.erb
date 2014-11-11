@@ -35,6 +35,6 @@
 </script>
 
 <script type="text/template" id="attendee_template">
-<%% if (present) {var hlit = " highlighted"} %>
-<div class="attendee<%%= hlit %>" id="<%%= id %>"><%%= username %></div>
+<%% if (present) {var hlit = "<span class='present'>P</span>"} else {var hlit = ""} %>
+<div class="attendee" id="<%%= id %>"><%%= username %><%%= hlit %></div>
 </script>

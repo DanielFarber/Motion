@@ -1,27 +1,44 @@
+<style>
+  body {
+    background-image: url(/images/parliament.jpg)
+  }
+</style>
 
-<center>
-
-<% if message %>
-<div><%= message %></div>
-<% end %>
-<h3>Log In</h3>
-<%= form_tag("/sessions", method: "POST") do %>
-  <%= label_tag(:email, "Email") %>
-  <%= text_field_tag(:email) %>
-  <%= label_tag(:password, "Password") %>
-  <%= password_field_tag(:password) %>
+<div class="login_box">
+  <div class="login_box_header motion">¡Motion!</div>
+  <% if message %>
+  <div class="error_message"><%= message %></div>
+  <% end %>
+  <h3>Log In</h3>
+  <%= form_tag("/sessions", method: "POST") do %>
+  <div>
+    <%= label_tag(:email, "Email:") %>
+    <%= text_field_tag(:email) %>
+  </div>
+  <div>
+    <%= label_tag(:password, "Password:") %>
+    <%= password_field_tag(:password) %>
+  </div>
   <%= submit_tag("Submit") %>
-<% end %>
+  <% end %>
 
-<h2>OR</h2>
+  <h2>OR</h2>
 
-<h3>Create an account</h3>
-<%= form_tag("/users", method: "POST") do %>
-  <%= label_tag(:email, "Email") %>
-  <%= text_field_tag(:email) %>
-  <%= label_tag(:password, "Password") %>
-  <%= password_field_tag(:password) %>
+  <h3>Create an account</h3>
+  <%= form_tag("/users", method: "POST") do %>
+  <div>
+    <%= label_tag(:email, "Email:") %>
+    <%= text_field_tag(:email) %>
+  </div>
+  <div>
+    <%= label_tag(:password, "Password:") %>
+    <%= password_field_tag(:password) %>
+  </div>
+  <div>
+    <%= label_tag(:username, "User Name:") %>
+    <%= text_field_tag(:username) %>
+  </div>
   <%= submit_tag("Submit") %>
-<% end %>
+  <% end %>
 
-</center>
+</div>

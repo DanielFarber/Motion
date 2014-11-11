@@ -1,5 +1,12 @@
+@font-face {
+	font-family: "typewriter";
+	src: url("fonts/moderntypewriter.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
-	font-family: "Amatic SC";
+	font-family: "typewriter";
 	color: white;
 	background-color: black;
 	font-size: 25px;
@@ -10,6 +17,7 @@ div.motion {
 	font-weight: bold;
 	border-bottom: white 2px dotted;
 	margin-bottom: 10px;
+	font-family: "Amatic SC";
 }
 
 nav {
@@ -22,19 +30,48 @@ a {
 	cursor: pointer;
 }
 
-.login_bgrnd {
-	z-index: -1;
-	position: absolute;
-	top: 0%;
-	left: 0%;
-	opacity: .75;
+input {
+	border: none;
 }
 
+.login_box {
+	width: 40%;
+	height: 24em;
+	border: white dotted 1px;
+	text-indent: 10%;
+	padding-bottom: 3%;
+	background-color: rgba(0, 0, 0, .6);
+	min-width: 450px;
+	margin: 0 auto;
+}
+
+.login_box form input{
+	height: 25px;
+	float: right;
+	margin-right: 5%;
+	font-size: 15px;
+	right: 5%;
+	background-color: rgba(255, 255, 255, .6);
+}
+
+.login_box_header {
+	text-align: center;
+	text-indent: 0%;
+}
+
+.login_inputs {
+	margin-bottom: 20px;
+}
 
 .centered {
 	width: 100%;
 	display: block;
 	padding-bottom: 40px;
+}
+
+.error_message {
+	font-size: 12px;
+	color: red;
 }
 
 .agenda_heading {

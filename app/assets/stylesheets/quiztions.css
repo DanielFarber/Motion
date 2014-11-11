@@ -1,0 +1,30 @@
+.open_question {
+	position: absolute;
+	top: 20%;
+	left: 25%;
+	width: 50%;
+	height: 500px;
+	z-index: 1001;
+	display: none;
+	border: 2px solid white;
+	background-color: black;
+}
+
+#quiztion {
+	font-size: 30px;
+	text-align: center;
+}
+
+hl {
+	color: white;
+}
+
+#answer {
+	height: 67%;
+}
+
+.quiztion_credit {
+	vertical-align: bottom;
+	text-align: right;
+	font-size: 16px;
+}

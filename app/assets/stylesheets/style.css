@@ -4,6 +4,7 @@ body {
 	background-color: black;
 	font-size: 25px;
 }
+
 div.motion {
 	font-size: 120px;
 	font-weight: bold;
@@ -20,6 +21,15 @@ a {
 	text-decoration: none;
 	cursor: pointer;
 }
+
+.login_bgrnd {
+	z-index: -1;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	opacity: .75;
+}
+
 
 .centered {
 	width: 100%;
@@ -50,23 +60,6 @@ a {
 	color: black;
 }
 
-
-.open_question {
-	position: absolute;
-	top: 20%;
-	left: 25%;
-	width: 50%;
-	height: 500px;
-	z-index: 1001;
-	display: none;
-	border: 2px solid white;
-	background-color: black;
-}
-
-hl {
-	color: white;
-}
-
 .position {
 	float: left;
 	border: white 1px solid;
@@ -85,12 +78,6 @@ hl {
 	display: block;
 	text-align: center;
 }
-
-#quiztion {
-	font-size: 30px;
-	text-align: center;
-}
-
 
 #answer_input {
 	border: none;
@@ -201,8 +188,4 @@ input {
 
 #input_div {
 	margin-left: 37.7%;
-}
-
-.nil {
-	display: none;
 }

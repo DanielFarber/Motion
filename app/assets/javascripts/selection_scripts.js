@@ -18,19 +18,13 @@ function getSelectionsSuccess(feed){
 			}
 			selections.push(selection)
 		})
-		$("#" + selections[0].id + ".selection").addClass("un_uppable").addClass("un_downable")
-		$(".list").children()[0].classList.add("un_uppable", "un_downable")
-		if ($(".list").children()[1]) {
-			$(".list").children()[1].classList.add("un_uppable")
-			// $("#" + selections[1].id + ".selection").addClass("un_uppable")
-		}
+		setUnVoteables()
 		setCorrectVoteListeners()
 		$(".list").attr("id", feed.position)
 		if (apiswf) {
 			evaluatePlayer()
 		}
 	}
-	// getAttendees()
 }
 
 function createSelectionEl(selection) {
@@ -113,6 +107,7 @@ function destroySelection(id) {
 }
 
 function setCorrectVoteListeners() {
+
 	$(".selection").children().children().bind({click: postQuiztion})
 	$(".un_uppable .vote_up").unbind({click: postQuiztion})
 	$(".un_downable .vote_down").unbind({click: postQuiztion})
@@ -131,4 +126,11 @@ function getSelectionInfo(id) {
 	return selected.info
 }
 
-
+function setUnVoteables() {
+	if ($(".selection")[0]) {
+		$(".selection")[0].classList.add("un_uppable", "un_downable")
+	}
+	if ($(".selection")[1]) {
+		$(".selection")[1].classList.add("un_uppable")
+	}
+}

@@ -7,7 +7,7 @@ function conditionallyAddPlayer(elem) {
 }
 
 function evaluatePlayer() {
-	if (!playingSongId) {
+	if (!playingSongId && $(".selection")[0]) {
 		apiswf.rdio_play(selections[position - 1].rdio_id)
 		playingSongId = selections[position - 1].id
 	}

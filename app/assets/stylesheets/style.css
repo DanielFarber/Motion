@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=external);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 @font-face {
 	font-family: "typewriter";
@@ -8,7 +8,7 @@
 }
 
 body {
-	font-family: "external";
+	font-family: "Montserrat";
 	color: white;
 	background-color: black;
 	font-size: 20px;

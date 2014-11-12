@@ -1,3 +1,5 @@
+@import url(//fonts.googleapis.com/css?family=Lora);
+
 @font-face {
 	font-family: "typewriter";
 	src: url("fonts/moderntypewriter.ttf");
@@ -6,10 +8,10 @@
 }
 
 body {
-	font-family: "typewriter";
+	font-family: "Lora";
 	color: white;
 	background-color: black;
-	font-size: 25px;
+	font-size: 20px;
 }
 
 div.motion {
@@ -22,6 +24,7 @@ div.motion {
 
 nav {
 	margin-bottom: -10px;
+	font-family: "Amatic SC"
 }
 
 a {
@@ -78,6 +81,7 @@ input {
 	width: 24%;
 	margin-left: 38%;
 	text-align: center;
+	font-family: "typewriter"
 }
 
 .selection_suggestions {
@@ -114,13 +118,6 @@ input {
 	border: 1px white dotted;
 	display: block;
 	text-align: center;
-}
-
-#answer_input {
-	border: none;
-	border-bottom: 1px black solid;
-	height: 25px;
-	box-shadow: none;
 }
 
 .un_uppable span span.vote_up, .un_downable span span.vote_down {
@@ -177,7 +174,7 @@ input {
 }
 
 .selection {
-	height: 80px;
+	min-height: 80px;
 	border: 1px white dotted;
 	overflow: auto;
 }

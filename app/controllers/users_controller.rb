@@ -3,10 +3,10 @@ class UsersController < ApplicationController
 
 	def create
 		hash = {email: params[:email], password: params[:password]}
-		hash[:username] = params[:email].split("@")[0]
+
 		user = User.new(hash)
 		if user.valid?
-			User.create(user)
+			User.create(hash)
 			redirect_to ("/?create=true")
 		else
 			reset_session

@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 		else
 			message = "You are not logged in." if params[:badlogin]
 			message = "Account creation succesful!  Please log in." if params[:create]
-			message = "Invalid email or password." if params[:error]
+			message = "Invalid email or password, or absent username." if params[:error]
 			render(:index, {locals: {message: message}})
 		end
 	end

@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
 
 	def create
-		hash = {email: params[:email], password: params[:password]}
+		hash = {email: params[:email], password: params[:password], username: params[:username]}
 
 		user = User.new(hash)
 		if user.valid?

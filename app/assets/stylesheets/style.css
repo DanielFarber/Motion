@@ -46,6 +46,7 @@ input {
 	background-color: rgba(0, 0, 0, .6);
 	min-width: 450px;
 	margin: 0 auto;
+	font-size: 25px;
 }
 
 .login_box form input{

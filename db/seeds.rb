@@ -6,21 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-def create_info_string(resource)
-	output = "<span class='selection_title'>#{resource.title}</span>"
-	output += " <span class='selection_artist'>by #{resource.artist}"
-	output += "  <span class='vote_up'>↑</span><span class='vote_down'>↓</span>"
-end
+user1 = User.create({email: "farber.daniel.m@gmail.com", password: "password", username: "dfarber"})
+user2 = User.create({email: "johnnycash@arkansas.com", password: "password", username: "johnnyC"})
+user3 = User.create({email: "georgestrait@texas.com", password: "password", username: "georgestrait"})
+user4 = User.create({email: "tobykeith@oklahoma.com", password: "password", username: "tobykeith"})
+user5 = User.create({email: "randytravis@northcarolina.com", password: "password", username: "randytravis"})
 
-user1 = User.create({email: "yo@mama.com", password: "password", username: "yourmama"})
-user2 = User.create({email: "fiction@al.com", password: "password", username: "fictionAl"})
-user3 = User.create({email: "george@strait.com", password: "password", username: "georgestrait"})
-user4 = User.create({email: "toby@keith.com", password: "password", username: "tobykeith"})
-user5 = User.create({email: "randy@travis.com", password: "password", username: "randytravis"})
-
-agenda1 = Agenda.create({position: 1, user_id: user3.id, name: "Taco Party!!!!!"})
+agenda1 = Agenda.create({position: 1, user_id: user3.id, name: "Bob's Going Away Party!!!!!"})
 agenda2 = Agenda.create({position: 1, user_id: user1.id, name: "Honky Tonk Pickup Truck"})
-agenda3 = Agenda.create({position: 1, user_id: user5.id, name: "Fley fley fley"})
+agenda3 = Agenda.create({position: 1, user_id: user5.id, name: "Downtown Grill"})
 agenda4 = Agenda.create({position: 1, user_id: user4.id, name: "The Houndstooth 33rd St"})
 agenda5 = Agenda.create({position: 1, user_id: user2.id, name: "Overlong Triangle"})
 

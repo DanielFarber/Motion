@@ -33,8 +33,8 @@ function postQuiztionSuccess(feed) {
 function checkAnswer(feed) {
 	var attempt = $("#answer_input").val()
 	var challenged = $("#challenged")
-	$(".timer").text("")
 	if (feed == "end" || feed.type == "focusout" || feed.keyCode == 13) {
+		$(".timer").text("")
 		var correct = (parseAnswers(attempt) == parseAnswers(screenAnswer))
 		var secret = (attempt == "ishkebibble")
 		$("#quiztion").delay(500).fadeOut({done: detachItem})

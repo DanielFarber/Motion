@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Lora);
+@import url(http://fonts.googleapis.com/css?family=external);
 
 @font-face {
 	font-family: "typewriter";
@@ -8,7 +8,7 @@
 }
 
 body {
-	font-family: "Lora";
+	font-family: "external";
 	color: white;
 	background-color: black;
 	font-size: 20px;

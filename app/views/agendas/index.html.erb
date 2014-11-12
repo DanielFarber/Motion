@@ -1,7 +1,7 @@
 <center class="heading"><div class="motion"><a href="/">¡Motion!</a></div></center>
 
 <nav>
-	<span class="username" id='<%= user.id %>'><%= user.email.downcase %></span>
+	<span class="username" id='<%= user.id %>'><%= user.username %></span>
 	<span class="logout" style="float: right">
 		<form action="/sessions" method="POST" name="logout">
 			<input type="hidden" name="_method" value="DELETE">

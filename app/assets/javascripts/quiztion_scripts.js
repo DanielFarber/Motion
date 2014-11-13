@@ -68,7 +68,7 @@ function testQuizDiv() {
 function countDown(div) {
 	var num = parseInt(div.textContent)
 	if (!num) {
-		div.textContent = "9"
+		div.textContent = "15"
 		setTimeout(function(){countDown(div)}, 1000)
 	}
 	else if (num != 1) {
